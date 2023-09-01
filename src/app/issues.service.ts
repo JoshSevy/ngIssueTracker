@@ -28,4 +28,11 @@ export class IssuesService {
   getPendingIssues(): Issue[] {
     return this.issues.filter((issue) => !issue.completed);
   }
+
+  getSuggestions(title: string): Issue[] {
+    if (title.length > 3) {
+      return this.issues.filter((issue) => issue.title.indexOf(title) !== -1);
+    }
+    return [];
+  }
 }
