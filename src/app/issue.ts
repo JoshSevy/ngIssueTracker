@@ -1,5 +1,5 @@
 export interface Issue {
-  issueNumber: number;
+  issueNo: number;
   title: string;
   description: string;
   priority: 'low' | 'high';
