@@ -1,0 +1,10 @@
+.clr-input {
+  width: 30%;
+}
+.clr-textarea {
+  width: 30%;
+  height: 100px;
+}
+button {
+  margin-top: 25px;
+}
