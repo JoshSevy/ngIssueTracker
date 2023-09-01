@@ -9,6 +9,15 @@ export class IssuesService {
 
   constructor() {}
 
+  completeIssue(issue: Issue) {
+    const selectedIssue: Issue = {
+      ...issue,
+      completed: new Date(),
+    };
+    const index = this.issues.findIndex((i) => i === issue);
+    this.issues[index] = selectedIssue;
+  }
+
   createIssue(issue: Issue) {
     // TODO: Update to a random number generater method to keep issueNo unique
     // Or we could check the current highest issueNo and add to that
